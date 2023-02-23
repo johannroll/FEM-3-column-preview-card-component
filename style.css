@@ -1,0 +1,141 @@
+:root {
+  --clr-orange: hsl(31, 77%, 52%);
+  --clr-cyan: hsl(184, 100%, 22%);
+  --clr-dark-cyan: hsl(179, 100%, 13%);
+  --clr-neutral-trans-white: hsl(0, 0%, 100%, 0.75);
+  --clr-neutral-gray: hsl(0, 0%, 95%);
+
+  --ff-headings: Big Shoulders Display;
+  --ff-body: Lexend Deca;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+} 
+
+*, html {
+  margin: 0;
+  padding: 0;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 4.2rem 1.5rem;
+}
+
+.card {
+  padding: 3rem 3rem;
+}
+
+.card__sedans {
+  background: var(--clr-orange);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card__suvs {
+  background: var(--clr-cyan);
+}
+
+.card__luxury {
+  background: var(--clr-dark-cyan);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.card__heading {
+  font-family: var(--ff-headings);
+  font-weight: 700;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  color: var(--clr-neutral-gray);
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+}
+
+.card__body {
+  font-family: var(--ff-body);
+  font-weight: 400; 
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  color: var(--clr-neutral-trans-white);
+  padding-bottom: 1.7rem;
+}
+
+.btn {
+  background: var(--clr-neutral-gray);
+  font-family: var(--ff-body);
+  font-weight: 700; 
+  font-size: 14px;
+  border: 0;
+  padding: 0.9rem 2rem;
+  border-radius: 35px;
+}
+
+.btn__sedans {
+  color: var(--clr-orange);
+}
+
+.btn__suvs {
+ color: var(--clr-cyan);
+}
+
+.btn__luxury {
+ color: var(--clr-dark-cyan);
+}
+
+.btn:hover {
+  border: 2px solid var(--clr-neutral-gray);
+  color: var(--clr-neutral-gray);
+  padding: calc(0.9rem - 2px) calc(2rem - 2px);
+}
+
+.btn__sedans:hover {
+  background: var(--clr-orange);
+}
+
+.btn__suvs:hover {
+  background: var(--clr-cyan);
+}
+
+.btn__luxury:hover {
+  background: var(--clr-dark-cyan);
+}
+
+@media (min-width: 768px) {
+  .block {
+    height: 100vh;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1.5rem;
+  }
+
+  .card {
+    max-width: 200px;
+  }
+
+  .card__body {
+    padding-bottom: 4.2rem;
+  }
+
+  .card__sedans {
+    border-top-right-radius: 0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  .card__luxury {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}
